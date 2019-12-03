@@ -1,0 +1,13 @@
+{
+	namespace: my.bookshop1,
+	definitions: {
+	CatalogService: {
+		kind: service,
+		@source: srv/cat-service.cds
+},entity Book @readonly as projection on bookshop1.Book;
+entity Book @readonly as projection on bookshop1.Book;
+entity Book @readonly as projection on bookshop1.Book;
+entity Book @readonly as projection on bookshop1.Book;
+entity Authors @insertonly as projection on bookshop1.Authors;
+entity Authors @insertonly as projection on bookshop1.Authors;
+};
