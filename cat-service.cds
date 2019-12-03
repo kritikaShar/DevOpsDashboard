@@ -1,7 +1,4 @@
-undefinedentity Book @readonly as projection on bookshop1.Book;
-entity Book @readonly as projection on bookshop1.Book;
-entity Book @readonly as projection on bookshop1.Book;
-entity Book @readonly as projection on bookshop1.Book;
-entity Authors @insertonly as projection on bookshop1.Authors;
+usingmy.bookshop1 from '../db/data-model';
+service CatalogService {
 entity Authors @insertonly as projection on bookshop1.Authors;
 };
