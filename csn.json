@@ -1,13 +1,7 @@
-{
-	namespace: my.bookshop1,
-	definitions: {
-	CatalogService: {
-		kind: service,
-		@source: srv/cat-service.cds
-},entity Book @readonly as projection on bookshop1.Book;
-entity Book @readonly as projection on bookshop1.Book;
-entity Book @readonly as projection on bookshop1.Book;
-entity Book @readonly as projection on bookshop1.Book;
-entity Authors @insertonly as projection on bookshop1.Authors;
-entity Authors @insertonly as projection on bookshop1.Authors;
-};
+"version": {
+	"csn": "1.0"
+	},
+"meta": {
+	"creator": "CDS Compiler v1.19.2"
+},
+"$version": "1.0"}
