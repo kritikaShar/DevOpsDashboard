@@ -5,7 +5,7 @@
 		"kind": "service",
 		"@source": "srv/cat-service.cds"
 	},
-undefined"version": {
+"version": {
 	"csn": "1.0"
 	},
 "meta": {
