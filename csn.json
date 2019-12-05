@@ -5,6 +5,18 @@
 		"kind": "service",
 		"@source": "srv/cat-service.cds"
 	},
+"CatalogService."Book": {
+	"kind":"entity",
+	"@readonly": true,
+	"query": {
+	 "SELECT": {
+	  "from": {
+	   "ref": [
+	   "my.bookshop1.Book"
+	   ]
+	  }
+	 }
+	},
 "version": {
 	"csn": "1.0"
 	},
