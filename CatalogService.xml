@@ -5,4 +5,13 @@
   </edmx:Reference>
   <edmx:DataServices>
   <Schema Namespace="CatalogService" xmlns="http://docs.oasis-open.org/odata/ns/edm">
-	Hellooooo--------------Hellooooo--------------Hellooooo--------------Hellooooo--------------Hellooooo--------------Hellooooo--------------};
+	<EntityContainer Name="EntityContainer">
+	 <EntitySet Name="Book" EntityType="CatalogService.Book">
+	 <EntitySet Name="Book" EntityType="CatalogService.Book">
+	 <EntitySet Name="Book" EntityType="CatalogService.Book">
+	 <NavigationPropertyBinding Path="n/a" Target="Authors"/>
+	 </EntitySet><EntitySet Name="Book" EntityType="CatalogService.Book">
+	 <EntitySet Name="Authors" EntityType="CatalogService.Authors">
+	 <EntitySet Name="Authors" EntityType="CatalogService.Authors">
+	 <NavigationPropertyBinding Path="author" Target="Book"/>
+	 </EntitySet>};
