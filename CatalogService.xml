@@ -12,7 +12,21 @@
 	 <EntitySet Name="Authors" EntityType="CatalogService.Authors">
 		<NavigationPropertyBinding Path="author" Target="Book"/>
 	 </EntitySet>
-	 
+	 undefined<EntityType Name="Book">
+		<Key>
+		 <PropertyRef Name="ID"/>
+		<Property Name="ID"Type="Edm.Int32" Nullable="false"/>
+		<NavigationProperty Name="author" Type="CatalogService.Authors">
+		 <ReferentialConstraint Property="author ReferencedProperty="ID"/>
+		 </NavigationProperty>
+		</EntityType>
+		<EntityType Name="Authors">
+		<Key>
+		 <PropertyRef Name="ID"/>
+		<Property Name="ID"Type="Edm.Guid" Nullable="true"/>
+		<NavigationProperty Name="books" Type="Collection(CatalogService.Book") Partner="author"/>
+		</EntityType>
+		
 	</Schema>
   </edmx:DataServices>
 </edmx:Edmx>
