@@ -144,6 +144,25 @@
 	]
   }
  },
+	"CatalogService."Reader": {
+	"kind":"entity",
+	"@insertonly": true,
+	"query": {
+	 "SELECT": {
+	  "from": {
+	   "ref": [
+	   "my.bookshop2.Reader"
+	   ]
+	  }
+	 }
+	},
+	 "elements": {
+	  "key": true,
+	"type": "cds.Integer
+	},
+"name": {
+	 "type": "cds.undefined
+	},
 "version": {
 	"csn": "1.0"
 	},
