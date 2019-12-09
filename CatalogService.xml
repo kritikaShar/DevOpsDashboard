@@ -9,11 +9,14 @@
 	 <EntitySet Name="Book" EntityType="CatalogService.Book"/>
 	 <EntitySet Name="Book" EntityType="CatalogService.Book"/>
 	 <EntitySet Name="Book" EntityType="CatalogService.Book">
-	 <NavigationPropertyBinding Path="author" Target="Authors"/>
+		<NavigationPropertyBinding Path="author" Target="Authors"/>
 	 </EntitySet>
 	 <EntitySet Name="Book" EntityType="CatalogService.Book"/>
 	 <EntitySet Name="Authors" EntityType="CatalogService.Authors"/>
 	 <EntitySet Name="Authors" EntityType="CatalogService.Authors">
-	 <NavigationPropertyBinding Path="author" Target="Book"/>
+		<NavigationPropertyBinding Path="books" Target="Book"/>
 	 </EntitySet>
-	 };
+	 
+</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>
