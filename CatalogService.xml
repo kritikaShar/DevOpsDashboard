@@ -14,9 +14,9 @@
 	 <EntitySet Name="Book" EntityType="CatalogService.Book"/>
 	 <EntitySet Name="Authors" EntityType="CatalogService.Authors"/>
 	 <EntitySet Name="Authors" EntityType="CatalogService.Authors">
-		<NavigationPropertyBinding Path="books" Target="Book"/>
+	 <NavigationPropertyBinding Path="author" Target="Book"/>
 	 </EntitySet>
 	 
-</Schema>
-	</edmx:DataServices>
+	</Schema>
+  </edmx:DataServices>
 </edmx:Edmx>
