@@ -6,46 +6,14 @@
   <edmx:DataServices>
   <Schema Namespace="CatalogService" xmlns="http://docs.oasis-open.org/odata/ns/edm">
 	<EntityContainer Name="EntityContainer">
-	 <EntitySet Name="Book" EntityType="CatalogService.Book"/>
-	 <EntitySet Name="Book" EntityType="CatalogService.Book"/>
 	 <EntitySet Name="Book" EntityType="CatalogService.Book">
 		<NavigationPropertyBinding Path="author" Target="Authors"/>
 	 </EntitySet>
-	 <EntitySet Name="Book" EntityType="CatalogService.Book"/>
+	 <EntitySet Name="Authors" EntityType="CatalogService.Authors"/>
 	 <EntitySet Name="Authors" EntityType="CatalogService.Authors">
 		<NavigationPropertyBinding Path="author" Target="Book"/>
 	 </EntitySet>
-	 <EntityType Name="Book">
-	 <Key>
-	  <PropertyRef Name="ID"/>
-	  <Property Name="ID"Type="Edm.Int32" Nullable="false"/>
-	  <Property Name="name "Type="Edm.undefined"/>
-	  </EntityType>
-	 <EntityType Name="Book">
-	 <Key>
-	  <PropertyRef Name="ID"/>
-	  <Property Name="ID"Type="Edm.Int32" Nullable="false"/>
-	  <Property Name="title "Type="Edm.undefined"/>
-	  </EntityType>
-	 <EntityType Name="Book">
-		<Key>
-		 <PropertyRef Name="ID"/>
-		<Property Name="ID"Type="Edm.Int32" Nullable="false"/>
-		<NavigationProperty Name="author" Type="CatalogService.Authors">
-		 <ReferentialConstraint Property="author ReferencedProperty="ID"/>
-		 </NavigationProperty>
-		</EntityType><EntityType Name="Book">
-	 <Key>
-	  <PropertyRef Name="ID"/>
-	  <Property Name="ID"Type="Edm.Int32" Nullable="false"/>
-	  <Property Name="stock "Type="Edm.undefined"/>
-	  </EntityType>
-	 <EntityType Name="Authors">
-	 <Key>
-	  <PropertyRef Name="ID"/>
-	 <Property Name="ID"Type="Edm.Int32" Nullable="false"/>
-	  <NavigationProperty Name="books" Type="Collection(CatalogService.Book") Partner="author"/>
-	 </EntityType>
+	 <EntitySet Name="Reader" EntityType="CatalogService.Reader"/>
 	 <Annotations Target="CatalogService.EntityContainer/Authors">
 	<Annotation Term="Capabilities.DeleteRestrictions">
 	 <Record Type="Capabilities.DeleteRestrictionsType">
