@@ -15,7 +15,7 @@
 	 </EntitySet>
 	 <EntitySet Name="Reader" EntityType="CatalogService.Reader"/>
 	 </EntityContainer>
-<Annotations Target="CatalogService.EntityContainer/Authors">
+	<Annotations Target="CatalogService.EntityContainer/Authors">
 	<Annotation Term="Capabilities.DeleteRestrictions">
 	 <Record Type="Capabilities.DeleteRestrictionsType">
 		<PropertyValue Property="Deletable" Bool="false"/>
