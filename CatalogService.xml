@@ -12,7 +12,7 @@
 	 <EntitySet Name="Authors" EntityType="CatalogService.Authors">
 		<NavigationPropertyBinding Path="author" Target="Book"/>
 	 </EntitySet>
-	 undefined<EntityType Name="Book">
+	 undefined<EntityType Name="Reader">
 		<Key>
 		 <PropertyRef Name="ID"/>
 		<Property Name="ID"Type="Edm.Int32" Nullable="false"/>
@@ -20,13 +20,29 @@
 		 <ReferentialConstraint Property="author ReferencedProperty="ID"/>
 		 </NavigationProperty>
 		</EntityType>
-		<EntityType Name="Authors">
+		<EntityType Name="Reader">
 		<Key>
 		 <PropertyRef Name="ID"/>
 		<Property Name="ID"Type="Edm.Guid" Nullable="true"/>
 		<NavigationProperty Name="books" Type="Collection(CatalogService.Book") Partner="author"/>
 		</EntityType>
-		
+		<Annotations Target="CatalogService.EntityContainer/Book">
+	<Annotation Term="Capabilities.DeleteRestrictions">
+	 <Record Type="Capabilities.DeleteRestrictionsType">
+		<PropertyValue Property="Deletable" Bool="false"/>
+	 </Record>
+	</Annotation>
+	<Annotation Term="Capabilities.InsertRestrictions">
+	 <Record Type="Capabilities.InsertRestrictionsType">
+		<PropertyValue Property="Insertable" Bool="false"/>
+	 </Record>
+	</Annotation>
+	<Annotation Term="Capabilities.UpdateRestrictions">
+	 <Record Type="Capabilities.UpdateRestrictionsType">
+		<PropertyValue Property="Updatable" Bool="false"/>
+	 </Record>
+	</Annotation>
+</Annotations>
 	</Schema>
   </edmx:DataServices>
 </edmx:Edmx>
