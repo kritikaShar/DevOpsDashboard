@@ -9,6 +9,9 @@
 	 <EntitySet Name="Book" EntityType="CatalogService.Book">
 		<NavigationPropertyBinding Path="author" Target="Authors"/>
 	 </EntitySet>
+	 <EntitySet Name="Authors" EntityType="CatalogService.Authors">
+		<NavigationPropertyBinding Path="author" Target="Book"/>
+	 </EntitySet>
 	 <Annotations Target="CatalogService.EntityContainer/Authors">
 	<Annotation Term="Capabilities.DeleteRestrictions">
 	 <Record Type="Capabilities.DeleteRestrictionsType">
@@ -25,10 +28,7 @@
 		<PropertyValue Property="Updatable" Bool="false"/>
 	 </Record>
 	</Annotation>
-</Annotations><EntitySet Name="Authors" EntityType="CatalogService.Authors">
-		<NavigationPropertyBinding Path="author" Target="Book"/>
-	 </EntitySet>
-	 <Annotations Target="CatalogService.EntityContainer/Book">
+</Annotations><Annotations Target="CatalogService.EntityContainer/Book">
 	<Annotation Term="Capabilities.DeleteRestrictions">
 	 <Record Type="Capabilities.DeleteRestrictionsType">
 		<PropertyValue Property="Deletable" Bool="false"/>
