@@ -13,7 +13,6 @@
 	 <EntitySet Name="Authors" EntityType="CatalogService.Authors">
 		<NavigationPropertyBinding Path="author" Target="Book"/>
 	 </EntitySet>
-	 <EntitySet Name="Reader" EntityType="CatalogService.Reader"/>
 	 </EntityContainer>
 	<EntityType Name="Book">
 	 <Key>
@@ -32,9 +31,10 @@
 		 <PropertyRef Name="ID"/>
 		<Property Name="ID"Type="Edm.Int32" Nullable="false"/>
 		<NavigationProperty Name="author" Type="CatalogService.Authors">
-		 <ReferentialConstraint Property="author ReferencedProperty="ID"/>
-		 </NavigationProperty>
-		</EntityType><EntityType Name="Book">
+		 <ReferentialConstraint Property="author" ReferencedProperty="ID"/>
+	</NavigationProperty>
+</EntityType>
+<EntityType Name="Book">
 	 <Key>
 	  <PropertyRef Name="ID"/>
 	  <Property Name="ID"Type="Edm.Int32" Nullable="false"/>
@@ -43,21 +43,9 @@
 	 <EntityType Name="Authors">
 	 <Key>
 	  <PropertyRef Name="ID"/>
-	  <Property Name="ID"Type="Edm.Int32" Nullable="false"/>
-	  <Property Name="name "Type="Edm.undefined"/>
-	  </EntityType>
-	 <EntityType Name="Authors">
-	 <Key>
-	  <PropertyRef Name="ID"/>
 	 <Property Name="ID"Type="Edm.Int32" Nullable="false"/>
 	  <NavigationProperty Name="books" Type="Collection(CatalogService.Book") Partner="author"/>
 	 </EntityType>
-	 <EntityType Name="Reader">
-	 <Key>
-	  <PropertyRef Name="ID"/>
-	  <Property Name="ID"Type="Edm.Int32" Nullable="false"/>
-	  <Property Name="name "Type="Edm.undefined"/>
-	  </EntityType>
 	 <Annotations Target="CatalogService.EntityContainer/Authors">
 	<Annotation Term="Capabilities.DeleteRestrictions">
 	 <Record Type="Capabilities.DeleteRestrictionsType">
