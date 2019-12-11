@@ -21,28 +21,6 @@
 	  "key": true,
 	"type": "cds.Integer
 	},
-"name": {
-	 "type": "cds.undefined
-	},
-	"CatalogService."Book": {
-	"kind":"entity",
-	"@readonly": true,
-	"query": {
-	 "SELECT": {
-	  "from": {
-	   "ref": [
-	   "my.bookshop1.Book"
-	   ]
-	  }
-	 }
-	},
-	 "elements": {
-	  "key": true,
-	"type": "cds.Integer
-	},
-"title": {
-	 "type": "cds.undefined
-	},
 	"CatalogService."Book": {
 	"kind":"entity",
 	"@readonly": true,
@@ -69,25 +47,6 @@
 		]
 	  }
 	  }
-	},
-	"CatalogService."Book": {
-	"kind":"entity",
-	"@readonly": true,
-	"query": {
-	 "SELECT": {
-	  "from": {
-	   "ref": [
-	   "my.bookshop1.Book"
-	   ]
-	  }
-	 }
-	},
-	 "elements": {
-	  "key": true,
-	"type": "cds.Integer
-	},
-"stock": {
-	 "type": "cds.undefined
 	},
 	"CatalogService."Authors": {
 	"kind":"entity",
