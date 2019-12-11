@@ -9,9 +9,11 @@
 	 <EntitySet Name="Book" EntityType="CatalogService.Book">
 		<NavigationPropertyBinding Path="author" Target="Authors"/>
 	 </EntitySet>
+	 <EntitySet Name="Authors" EntityType="CatalogService.Authors"/>
 	 <EntitySet Name="Authors" EntityType="CatalogService.Authors">
 		<NavigationPropertyBinding Path="author" Target="Book"/>
 	 </EntitySet>
+	 <EntitySet Name="Reader" EntityType="CatalogService.Reader"/>
 	 </EntityContainer>
 	<EntityType Name="Book">
 	 <Key>
