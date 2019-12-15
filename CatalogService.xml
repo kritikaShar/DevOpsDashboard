@@ -21,33 +21,31 @@
 	  <Property Name="ID"Type="Edm.Int32" Nullable="false"/>
 	  <Property Name="name "Type="Edm.undefined"/>
 	  </EntityType>
-	 <EntityType Name="Book">
+	 
 	 <Key>
 	  <PropertyRef Name="ID"/>
 	  <Property Name="ID"Type="Edm.Int32" Nullable="false"/>
 	  <Property Name="title "Type="Edm.undefined"/>
-	  </EntityType>
-	 <EntityType Name="Book">
+	
 		<Key>
 		 <PropertyRef Name="ID"/>
 		<Property Name="ID"Type="Edm.Int32" Nullable="false"/>
 		<NavigationProperty Name="author" Type="CatalogService.Authors">
 		 <ReferentialConstraint Property="author" ReferencedProperty="ID"/>
 	</NavigationProperty>
-</EntityType>
-<EntityType Name="Book">
+
 	 <Key>
 	  <PropertyRef Name="ID"/>
 	  <Property Name="ID"Type="Edm.Int32" Nullable="false"/>
 	  <Property Name="stock "Type="Edm.undefined"/>
-	  </EntityType>
-	 <EntityType Name="Authors">
+	</EntityType>
+
 	 <Key>
 	  <PropertyRef Name="ID"/>
 	 <Property Name="ID"Type="Edm.Int32" Nullable="false"/>
 	  <NavigationProperty Name="books" Type="Collection(CatalogService.Book") Partner="author"/>
-	 </EntityType>
-	 <Annotations Target="CatalogService.EntityContainer/Authors">
+	</EntityType>
+<Annotations Target="CatalogService.EntityContainer/Authors">
 	<Annotation Term="Capabilities.DeleteRestrictions">
 	 <Record Type="Capabilities.DeleteRestrictionsType">
 		<PropertyValue Property="Deletable" Bool="false"/>
