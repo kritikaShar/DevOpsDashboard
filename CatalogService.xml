@@ -32,7 +32,7 @@
 <EntityType Name="Authors">
 	 <Key>
 	  <PropertyRef Name="ID"/>
-	  <Property Name="ID"Type="Edm.Int32" Nullable="false"/>
+	 </Key> <Property Name="ID"Type="Edm.Int32" Nullable="false"/>
 	  <Property Name="name "Type="Edm.undefined"/>
 	 
 	  <NavigationProperty Name="books" Type="Collection(CatalogService.Book") Partner="author"/>
@@ -40,7 +40,7 @@
 <EntityType Name="Reader">
 	 <Key>
 	  <PropertyRef Name="ID"/>
-	  <Property Name="ID"Type="Edm.Int32" Nullable="false"/>
+	 </Key> <Property Name="ID"Type="Edm.Int32" Nullable="false"/>
 	  <Property Name="name "Type="Edm.undefined"/>
 	 </EntityType>
 <Annotations Target="CatalogService.EntityContainer/Authors">
