@@ -15,7 +15,7 @@
 	 </EntitySet>
 	 <EntitySet Name="Reader" EntityType="CatalogService.Reader"/>
 	 </EntityContainer>
-	<EntityType Name="Book">
+	<EntityType  Name="Book">
 	 <Key>
 	  <PropertyRef Name="ID"/>
 	  <Property Name="ID"Type="Edm.Int32" Nullable="false"/>
@@ -42,7 +42,8 @@
 	  <PropertyRef Name="ID"/>
 	  <Property Name="ID"Type="Edm.Int32" Nullable="false"/>
 	  <Property Name="name "Type="Edm.undefined"/>
-	 <Annotations Target="CatalogService.EntityContainer/Authors">
+	 </EntityType>
+<Annotations Target="CatalogService.EntityContainer/Authors">
 	<Annotation Term="Capabilities.DeleteRestrictions">
 	 <Record Type="Capabilities.DeleteRestrictionsType">
 		<PropertyValue Property="Deletable" Bool="false"/>
