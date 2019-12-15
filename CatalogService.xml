@@ -13,8 +13,9 @@
 	 <EntitySet Name="Authors" EntityType="CatalogService.Authors">
 		<NavigationPropertyBinding Path="author" Target="Book"/>
 	 </EntitySet>
+	 <EntitySet Name="Reader" EntityType="CatalogService.Reader"/>
 	 </EntityContainer>
-	<EntityType Name="Book">
+	his<EntityType Name="<EntityType Name="Book">
 	 <Key>
 	  <PropertyRef Name="ID"/>
 	  <Property Name="ID"Type="Edm.Int32" Nullable="false"/>
