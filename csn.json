@@ -5,37 +5,11 @@
 		"kind": "service",
 		"@source": "srv/cat-service.cds"
 	},
-	"CatalogService."Book": {
-	"kind":"entity",
-	"@readonly": true,
-	"query": {
-	 "SELECT": {
-	  "from": {
-	   "ref": [
-	   "my.bookshop1.Book"
-	   ]
-	  }
-	 }
+"name": {
+	 "type": "cds.String
 	},
-	 "elements": {
-	  "key": true,
-	"type": "cds.Integer
-	},
-	"CatalogService."Book": {
-	"kind":"entity",
-	"@readonly": true,
-	"query": {
-	 "SELECT": {
-	  "from": {
-	   "ref": [
-	   "my.bookshop1.Book"
-	   ]
-	  }
-	 }
-	},
-	 "elements": {
-	  "key": true,
-	"type": "cds.Integer
+"title": {
+	 "type": "cds.String
 	},
 "author": {
 	  "type":"cds.Association to",
@@ -48,40 +22,11 @@
 	  }
 	  }
 	},
-	"CatalogService."Authors": {
-	"kind":"entity",
-	"@insertonly": true,
-	"query": {
-	 "SELECT": {
-	  "from": {
-	   "ref": [
-	   "my.bookshop1.Authors"
-	   ]
-	  }
-	 }
-	},
-	 "elements": {
-	  "key": true,
-	"type": "cds.UUID
+"stock": {
+	 "type": "cds.Inetger
 	},
 "name": {
 	 "type": "cds.String
-	},
-	"CatalogService."Authors": {
-	"kind":"entity",
-	"@insertonly": true,
-	"query": {
-	 "SELECT": {
-	  "from": {
-	   "ref": [
-	   "my.bookshop1.Authors"
-	   ]
-	  }
-	 }
-	},
-	 "elements": {
-	  "key": true,
-	"type": "cds.UUID
 	},
 "books": {
 	  "type":"cds.Association to many",
@@ -119,6 +64,56 @@
 	  "key": true,
 	"type": "cds.Integer
 	},
+{
+	"namespace":"my.bookshop1",
+	"definitions": {
+	"CatalogService": {
+		"kind": "service",
+		"@source": "srv/cat-service.cds"
+	},
+"name": {
+	 "type": "cds.String
+	},
+"title": {
+	 "type": "cds.String
+	},
+"author": {
+	  "type":"cds.Association to",
+	  "target": "CatalogService.Book"
+	  "keys"" [
+	   {
+		"ref": [
+		 "ID"
+		]
+	  }
+	  }
+	},
+"stock": {
+	 "type": "cds.Inetger
+	},
+"name": {
+	 "type": "cds.String
+	},
+"books": {
+	  "type":"cds.Association to many",
+	   "cardinality": {
+	  "max": "*"
+	  },
+	  "target": "CatalogService.Authors"
+	  "on": [
+	   {
+		"ref": [
+		 "books",
+		"author"
+		]
+	  },"=",
+	  {"ref": [
+	 $self
+	  ]
+	 }
+	]
+  }
+ },
 "name": {
 	 "type": "cds.String
 	},
