@@ -19,21 +19,21 @@
 	 <Key>
 	  <PropertyRef Name="ID"/>
 	  <Property Name="ID"Type="Edm.Int32" Nullable="false"/>
-	  <Property Name="name "Type="Edm.undefined"/>
+	  <Property Name="name "Type="Edm.String"/>
 	 
-	  <Property Name="title "Type="Edm.undefined"/>
+	  <Property Name="title "Type="Edm.String"/>
 	
 		<NavigationProperty Name="author" Type="CatalogService.Authors">
 		 <ReferentialConstraint Property="author" ReferencedProperty="ID"/>
 	</NavigationProperty>
 
-	  <Property Name="stock "Type="Edm.undefined"/>
+	  <Property Name="stock "Type="Edm.Inetger"/>
 	</EntityType>
 <EntityType Name="Authors">
 	 <Key>
 	  <PropertyRef Name="ID"/>
 	 </Key> <Property Name="ID"Type="Edm.Int32" Nullable="false"/>
-	  <Property Name="name "Type="Edm.undefined"/>
+	  <Property Name="name "Type="Edm.String"/>
 	 
 	  <NavigationProperty Name="books" Type="Collection(CatalogService.Book") Partner="author"/>
 	</EntityType>
