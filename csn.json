@@ -103,6 +103,25 @@
 	]
   }
  },
+	"CatalogService."Reader": {
+	"kind":"entity",
+	"@readonly": true,
+	"query": {
+	 "SELECT": {
+	  "from": {
+	   "ref": [
+	   "my.bookshop1.Reader"
+	   ]
+	  }
+	 }
+	},
+	 "elements": {
+	  "key": true,
+	"type": "cds.Integer
+	},
+"name": {
+	 "type": "cds.String
+	},
 "version": {
 	"csn": "1.0"
 	},
