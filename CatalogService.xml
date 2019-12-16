@@ -12,6 +12,7 @@
 	 <EntitySet Name="Authors" EntityType="CatalogService.Authors">
 		<NavigationPropertyBinding Path="author" Target="Book"/>
 	 </EntitySet>
+	 <EntitySet Name="Readers" EntityType="CatalogService.Readers"/>
 	 </EntityContainer>
 	<EntityType  Name="Book">
 	 <Key>
@@ -37,6 +38,13 @@
 	 
 	  <NavigationProperty Name="books" Type="Collection(CatalogService.Book") Partner="author"/>
 	</EntityType>
+<EntityType Name="Readers">
+	 <Key>
+	  <PropertyRef Name="ID"/>
+		</Key>
+		<Property Name="ID"Type="Edm.Int32" Nullable="false"/>
+	  <Property Name="name "Type="Edm.String"/>
+	 </EntityType>
 <Annotations Target="CatalogService.EntityContainer/Authors">
 	<Annotation Term="Capabilities.DeleteRestrictions">
 	 <Record Type="Capabilities.DeleteRestrictionsType">
