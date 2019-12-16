@@ -16,8 +16,8 @@
 	<EntityType  Name="Book">
 	 <Key>
 	  <PropertyRef Name="ID"/>
-</Key>
- <Property Name="ID"Type="Edm.Int32" Nullable="false"/>
+		</Key>
+		<Property Name="ID"Type="Edm.Int32" Nullable="false"/>
 	  <Property Name="name "Type="Edm.String"/>
 	 
 	  <Property Name="title "Type="Edm.String"/>
@@ -31,8 +31,8 @@
 <EntityType Name="Authors">
 	 <Key>
 	  <PropertyRef Name="ID"/>
-</Key>
- <Property Name="ID"Type="Edm.Int32" Nullable="false"/>
+		</Key>
+		<Property Name="ID"Type="Edm.Int32" Nullable="false"/>
 	  <Property Name="name "Type="Edm.String"/>
 	 
 	  <NavigationProperty Name="books" Type="Collection(CatalogService.Book") Partner="author"/>
