@@ -65,7 +65,7 @@
 	"type": "cds.UUID
 	},
 "name": {
-	 "type": "cds.undefined
+	 "type": "cds.String
 	},
 	"CatalogService."Authors": {
 	"kind":"entity",
