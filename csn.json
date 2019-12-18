@@ -18,7 +18,7 @@
 	 }
 	},
 	 "elements": {
-	"undefined": {
+	"ID": {
 	 "key": true,
 	"type": "cds.Integer"
 	},
@@ -55,7 +55,7 @@
 	 }
 	},
 	 "elements": {
-	"undefined": {
+	"ID": {
 	 "key": true,
 	"type": "cds.UUID"
 	},
@@ -95,14 +95,15 @@
 	 }
 	},
 	 "elements": {
-	"undefined": {
+	"ID": {
 	 "key": true,
 	"type": "cds.Integer"
 	},
  "name": {
 	 "type": "cds.String"
 	},
-"my.bookshop1.Book" : {
+"$syntax": "projection"
+},"my.bookshop1.Book" : {
  "kind": "entity",
 	 "elements": {
 	"ID": {
