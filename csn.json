@@ -30,7 +30,7 @@
 "author": {
 	  "type":"cds.Association",
 	  "target": "CatalogService.Book",
-	  "keys"" [
+	  "keys" [
 	   {
 		"ref": [
 		 "ID"
