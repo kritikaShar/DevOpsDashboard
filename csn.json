@@ -22,12 +22,12 @@
 	"type": "cds.Integer
 	},
 "name": {
-	 "type": "cds.String
+	 "type": "cds.String"
 	},
-"title": {
-	 "type": "cds.String
+"$syntax": "projection""title": {
+	 "type": "cds.String"
 	},
-"author": {
+"$syntax": "projection""author": {
 	  "type":"cds.Association to",
 	  "target": "CatalogService.Book"
 	  "keys"" [
@@ -38,10 +38,10 @@
 	  }
 	  }
 	},
-"stock": {
-	 "type": "cds.Inetger
+"$syntax": "projection""stock": {
+	 "type": "cds.Inetger"
 	},
-	"CatalogService."Authors": {
+"$syntax": "projection"	"CatalogService."Authors": {
 	"kind":"entity",
 	"@insertonly": true,
 	"query": {
@@ -58,9 +58,9 @@
 	"type": "cds.UUID
 	},
 "name": {
-	 "type": "cds.String
+	 "type": "cds.String"
 	},
-"books": {
+"$syntax": "projection""books": {
 	  "type":"cds.Association to many",
 	   "cardinality": {
 	  "max": "*"
@@ -80,7 +80,7 @@
 	]
   }
  },
-	"CatalogService."Readers": {
+"$syntax": "projection"	"CatalogService."Readers": {
 	"kind":"entity",
 	"@readonly": true,
 	"query": {
@@ -97,7 +97,59 @@
 	"type": "cds.Integer
 	},
 "name": {
-	 "type": "cds.String
+	 "type": "cds.String"
+	},
+"$syntax": "projection""my.bookshop1.Book" : {
+ "kind": "entity",
+ "name": {
+	 "type": "cds.String"
+	},
+"title": {
+	 "type": "cds.String"
+	},
+"author": {
+	  "type":"cds.Association to",
+	  "target": "my.bookshop1.Book"
+	  "keys" [
+	   {
+		"ref": [
+		 "ID"
+		]
+	  }
+	  }
+	},
+"stock": {
+	 "type": "cds.Inetger"
+	},
+"my.bookshop1.Authors" : {
+ "kind": "entity",
+ "name": {
+	 "type": "cds.String"
+	},
+"books": {
+	  "type":"cds.Association to many",
+	   "cardinality": {
+	  "max": "*"
+	  },
+	  "target":"my.bookshop1.Authors"
+	  "on": [
+	   {
+		"ref": [
+		 "books",
+		"author"
+		]
+	  },"=",
+	  {"ref": [
+	 $self
+	  ]
+	 }
+	]
+  }
+ },
+"my.bookshop1.Readers" : {
+ "kind": "entity",
+ "name": {
+	 "type": "cds.String"
 	},
 "version": {
 	"csn": "1.0"
