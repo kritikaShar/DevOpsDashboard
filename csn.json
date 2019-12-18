@@ -5,7 +5,7 @@
 		"kind": "service",
 		"@source": "srv/cat-service.cds"
 	},
-	"CatalogService."Book": {
+"CatalogService.Book": {
 	"kind":"entity",
 	"@readonly": true,
 	"query": {
@@ -29,7 +29,7 @@
 	},
 "author": {
 	  "type":"cds.Association",
-	  "target": "CatalogService.Book"
+	  "target": "CatalogService.Book",
 	  "keys"" [
 	   {
 		"ref": [
@@ -41,7 +41,7 @@
 "stock": {
 	 "type": "cds.Inetger"
 	},
-	"CatalogService."Authors": {
+"CatalogService.Authors": {
 	"kind":"entity",
 	"@insertonly": true,
 	"query": {
@@ -65,7 +65,7 @@
 	   "cardinality": {
 	  "max": "*"
 	  },
-	  "target": "CatalogService.Authors"
+	  "target": "CatalogService.Authors",
 	  "on": [
 	   {
 		"ref": [
@@ -80,7 +80,7 @@
 	]
   }
  },
-	"CatalogService."Readers": {
+"CatalogService.Readers": {
 	"kind":"entity",
 	"@readonly": true,
 	"query": {
@@ -113,7 +113,7 @@
 	},
 "author": {
 	  "type":"cds.Association",
-	  "target": "my.bookshop1.Book"
+	  "target": "my.bookshop1.Book",
 	  "keys" [
 	   {
 		"ref": [
@@ -139,7 +139,7 @@
 	   "cardinality": {
 	  "max": "*"
 	  },
-	  "target":"my.bookshop1.Authors"
+	  "target":"my.bookshop1.Authors",
 	  "on": [
 	   {
 		"ref": [
