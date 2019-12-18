@@ -24,10 +24,11 @@
 "name": {
 	 "type": "cds.String"
 	},
-"$syntax": "projection""title": {
+"$syntax": "projection"
+"title": {
 	 "type": "cds.String"
 	},
-"$syntax": "projection""author": {
+"author": {
 	  "type":"cds.Association to",
 	  "target": "CatalogService.Book"
 	  "keys"" [
@@ -38,10 +39,10 @@
 	  }
 	  }
 	},
-"$syntax": "projection""stock": {
+"stock": {
 	 "type": "cds.Inetger"
 	},
-"$syntax": "projection"	"CatalogService."Authors": {
+	"CatalogService."Authors": {
 	"kind":"entity",
 	"@insertonly": true,
 	"query": {
@@ -60,7 +61,8 @@
 "name": {
 	 "type": "cds.String"
 	},
-"$syntax": "projection""books": {
+"$syntax": "projection"
+"books": {
 	  "type":"cds.Association to many",
 	   "cardinality": {
 	  "max": "*"
@@ -80,7 +82,7 @@
 	]
   }
  },
-"$syntax": "projection"	"CatalogService."Readers": {
+	"CatalogService."Readers": {
 	"kind":"entity",
 	"@readonly": true,
 	"query": {
@@ -99,8 +101,13 @@
 "name": {
 	 "type": "cds.String"
 	},
-"$syntax": "projection""my.bookshop1.Book" : {
+"$syntax": "projection"
+"my.bookshop1.Book" : {
  "kind": "entity",
+	 "elements": {
+	  "key": true,
+	"type": "cds.Integer
+	},
  "name": {
 	 "type": "cds.String"
 	},
@@ -123,6 +130,10 @@
 	},
 "my.bookshop1.Authors" : {
  "kind": "entity",
+	 "elements": {
+	  "key": true,
+	"type": "cds.UUID
+	},
  "name": {
 	 "type": "cds.String"
 	},
@@ -148,6 +159,10 @@
  },
 "my.bookshop1.Readers" : {
  "kind": "entity",
+	 "elements": {
+	  "key": true,
+	"type": "cds.Integer
+	},
  "name": {
 	 "type": "cds.String"
 	},
