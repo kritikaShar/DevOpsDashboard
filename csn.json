@@ -37,8 +37,7 @@
 		 "ID"
 		]
 	  }
-	  }
-	},
+	  },
 "stock": {
 	 "type": "cds.Inetger"
 	},
@@ -80,8 +79,7 @@
 	  ]
 	 }
 	]
-  }
- },
+  },
 "CatalogService.Readers": {
 	"kind":"entity",
 	"@readonly": true,
@@ -103,7 +101,8 @@
 	 "type": "cds.String"
 	},
 "$syntax": "projection"
-},"my.bookshop1.Book" : {
+},
+"my.bookshop1.Book" : {
  "kind": "entity",
 	 "elements": {
 	"ID": {
@@ -125,8 +124,7 @@
 		 "ID"
 		]
 	  }
-	  }
-	},
+	  },
 "stock": {
 	 "type": "cds.Inetger"
 	},
@@ -158,8 +156,7 @@
 	  ]
 	 }
 	]
-  }
- },
+  },
 "my.bookshop1.Readers" : {
  "kind": "entity",
 	 "elements": {
