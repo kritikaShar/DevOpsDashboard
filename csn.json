@@ -19,7 +19,7 @@
 	},
 	 "elements": {
 	  "key": true,
-	"type": "cds.Integer
+	"type": "cds.Integer"
 	},
 "name": {
 	 "type": "cds.String"
@@ -55,7 +55,7 @@
 	},
 	 "elements": {
 	  "key": true,
-	"type": "cds.UUID
+	"type": "cds.UUID"
 	},
 "name": {
 	 "type": "cds.String"
@@ -94,7 +94,7 @@
 	},
 	 "elements": {
 	  "key": true,
-	"type": "cds.Integer
+	"type": "cds.Integer"
 	},
 "name": {
 	 "type": "cds.String"
@@ -103,7 +103,7 @@
  "kind": "entity",
 	 "elements": {
 	  "key": true,
-	"type": "cds.Integer
+	"type": "cds.Integer"
 	},
  "name": {
 	 "type": "cds.String"
@@ -129,7 +129,7 @@
  "kind": "entity",
 	 "elements": {
 	  "key": true,
-	"type": "cds.UUID
+	"type": "cds.UUID"
 	},
  "name": {
 	 "type": "cds.String"
@@ -158,7 +158,7 @@
  "kind": "entity",
 	 "elements": {
 	  "key": true,
-	"type": "cds.Integer
+	"type": "cds.Integer"
 	},
  "name": {
 	 "type": "cds.String"
