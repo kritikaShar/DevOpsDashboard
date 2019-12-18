@@ -24,40 +24,8 @@
 "name": {
 	 "type": "cds.String
 	},
-	"CatalogService."Book": {
-	"kind":"entity",
-	"@readonly": true,
-	"query": {
-	 "SELECT": {
-	  "from": {
-	   "ref": [
-	   "my.bookshop1.Book"
-	   ]
-	  }
-	 }
-	},
-	 "elements": {
-	  "key": true,
-	"type": "cds.Integer
-	},
 "title": {
 	 "type": "cds.String
-	},
-	"CatalogService."Book": {
-	"kind":"entity",
-	"@readonly": true,
-	"query": {
-	 "SELECT": {
-	  "from": {
-	   "ref": [
-	   "my.bookshop1.Book"
-	   ]
-	  }
-	 }
-	},
-	 "elements": {
-	  "key": true,
-	"type": "cds.Integer
 	},
 "author": {
 	  "type":"cds.Association to",
@@ -69,22 +37,6 @@
 		]
 	  }
 	  }
-	},
-	"CatalogService."Book": {
-	"kind":"entity",
-	"@readonly": true,
-	"query": {
-	 "SELECT": {
-	  "from": {
-	   "ref": [
-	   "my.bookshop1.Book"
-	   ]
-	  }
-	 }
-	},
-	 "elements": {
-	  "key": true,
-	"type": "cds.Integer
 	},
 "stock": {
 	 "type": "cds.Inetger
@@ -107,22 +59,6 @@
 	},
 "name": {
 	 "type": "cds.String
-	},
-	"CatalogService."Authors": {
-	"kind":"entity",
-	"@insertonly": true,
-	"query": {
-	 "SELECT": {
-	  "from": {
-	   "ref": [
-	   "my.bookshop1.Authors"
-	   ]
-	  }
-	 }
-	},
-	 "elements": {
-	  "key": true,
-	"type": "cds.UUID
 	},
 "books": {
 	  "type":"cds.Association to many",
