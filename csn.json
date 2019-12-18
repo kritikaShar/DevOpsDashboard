@@ -18,10 +18,11 @@
 	 }
 	},
 	 "elements": {
-	  "key": true,
+	"undefined": {
+	 "key": true,
 	"type": "cds.Integer"
 	},
-"name": {
+ "name": {
 	 "type": "cds.String"
 	},
 "title": {
@@ -30,7 +31,7 @@
 "author": {
 	  "type":"cds.Association",
 	  "target": "CatalogService.Book",
-	  "keys" [
+	  "keys": [
 	   {
 		"ref": [
 		 "ID"
@@ -54,10 +55,11 @@
 	 }
 	},
 	 "elements": {
-	  "key": true,
+	"undefined": {
+	 "key": true,
 	"type": "cds.UUID"
 	},
-"name": {
+ "name": {
 	 "type": "cds.String"
 	},
 "books": {
@@ -93,16 +95,18 @@
 	 }
 	},
 	 "elements": {
-	  "key": true,
+	"undefined": {
+	 "key": true,
 	"type": "cds.Integer"
 	},
-"name": {
+ "name": {
 	 "type": "cds.String"
 	},
 "my.bookshop1.Book" : {
  "kind": "entity",
 	 "elements": {
-	  "key": true,
+	"ID": {
+	 "key": true,
 	"type": "cds.Integer"
 	},
  "name": {
@@ -114,7 +118,7 @@
 "author": {
 	  "type":"cds.Association",
 	  "target": "my.bookshop1.Book",
-	  "keys" [
+	  "keys": [
 	   {
 		"ref": [
 		 "ID"
@@ -128,7 +132,8 @@
 "my.bookshop1.Authors" : {
  "kind": "entity",
 	 "elements": {
-	  "key": true,
+	"ID": {
+	 "key": true,
 	"type": "cds.UUID"
 	},
  "name": {
@@ -157,7 +162,8 @@
 "my.bookshop1.Readers" : {
  "kind": "entity",
 	 "elements": {
-	  "key": true,
+	"ID": {
+	 "key": true,
 	"type": "cds.Integer"
 	},
  "name": {
