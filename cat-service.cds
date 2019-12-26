@@ -1,10 +1,8 @@
-using my.bookshop1 from '../db/data-model';
-service CatalogService {
-entity Book @readonly as projection on bookshop1.Book;
-entity Book @readonly as projection on bookshop1.Book;
-entity Book @readonly as projection on bookshop1.Book;
-entity Book @readonly as projection on bookshop1.Book;
-entity Authors @insertonly as projection on bookshop1.Authors;
-entity Authors @insertonly as projection on bookshop1.Authors;
-entity Readers @readonly as projection on bookshop1.Readers;
+undefinedentity Book @readonly as projection on undefined.Book;
+entity Book @readonly as projection on undefined.Book;
+entity Book @readonly as projection on undefined.Book;
+entity Book @readonly as projection on undefined.Book;
+entity Authors @insertonly as projection on undefined.Authors;
+entity Authors @insertonly as projection on undefined.Authors;
+entity Readers @readonly as projection on undefined.Readers;
 };
