@@ -60,28 +60,7 @@
 	 }
 	]
   },
-"$syntax": "projection"
 },
-"CatalogService.Readers": {
-	"kind":"entity",
-	"@readonly": true,
-	"query": {
-	 "SELECT": {
-	  "from": {
-	   "ref": [
-	   "my.bookshop1.Readers"
-	   ]
-	  }
-	 }
-	},
-	 "elements": {
-	"ID": {
-	 "key": true,
-	"type": "cds.Integer"
-	},
- "name": {
-	 "type": "cds.String"
-	},
 "$syntax": "projection"
 },
 "my.bookshop1.Book" : {
