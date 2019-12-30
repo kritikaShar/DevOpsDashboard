@@ -1,7 +1,85 @@
-"name": {
+{
+	"namespace":"my.bookshop1",
+	"definitions": {
+	"CatalogService": {
+		"kind": "service",
+		"@source": "srv/cat-service.cds"
+	},
+"CatalogService.Book": {
+	"kind":"entity",
+	"@readonly": true,
+	"query": {
+	 "SELECT": {
+	  "from": {
+	   "ref": [
+	   "my.bookshop1.Book"
+	   ]
+	  }
+	 }
+	},
+	 "elements": {
+	"ID": {
+	 "key": true,
+	"type": "cds.Integer"
+	},
+ "name": {
 	 "type": "cds.String"
 	},
-"name": {
+"title": {
+	 "type": "cds.String"
+	},
+"author": {
+	  "type":"cds.Association",
+	  "target": "CatalogService.Book",
+	  "keys": [
+	   {
+		"ref": [
+		 "ID"
+		]
+	  }
+	  },
+"stock": {
+	 "type": "cds.Inetger"
+	},
+"books": {
+	  "type":"cds.Association",
+	   "cardinality": {
+	  "max": "*"
+	  },
+	  "target": "CatalogService.Authors",
+	  "on": [
+	   {
+		"ref": [
+		 "books",
+		"author"
+		]
+	  },"=",
+	  {"ref": [
+	 $self
+	  ]
+	 }
+	]
+  },
+"$syntax": "projection"
+},
+"CatalogService.Readers": {
+	"kind":"entity",
+	"@readonly": true,
+	"query": {
+	 "SELECT": {
+	  "from": {
+	   "ref": [
+	   "my.bookshop1.Readers"
+	   ]
+	  }
+	 }
+	},
+	 "elements": {
+	"ID": {
+	 "key": true,
+	"type": "cds.Integer"
+	},
+ "name": {
 	 "type": "cds.String"
 	},
 "$syntax": "projection"
