@@ -5,42 +5,12 @@
 		"kind": "service",
 		"@source": "srv/cat-service.cds"
 	},
-"CatalogService.Book": {
-	"kind":"entity",
-	"@readonly": true,
-	"query": {
-	 "SELECT": {
-	  "from": {
-	   "ref": [
-	   "my.bookshop1.Book"
-	   ]
-	  }
-	 }
-	},
-	 "elements": {
-	"ID": {
-	 "key": true,
-	"type": "cds.Integer"
-	},
- "name": {
-	 "type": "cds.String"
-	},
-"title": {
-	 "type": "cds.String"
-	},
-"author": {
-	  "type":"cds.Association",
-	  "target": "CatalogService.Book",
-	  "keys": [
-	   {
-		"ref": [
-		 "ID"
-		]
-	  }
-	  },
 "stock": {
 	 "type": "cds.Inetger"
 	},
+},
+"$syntax": "projection"
+},
 "books": {
 	  "type":"cds.Association",
 	   "cardinality": {
@@ -60,6 +30,29 @@
 	 }
 	]
   },
+},
+"$syntax": "projection"
+},
+"CatalogService.Readers": {
+	"kind":"entity",
+	"@readonly": true,
+	"query": {
+	 "SELECT": {
+	  "from": {
+	   "ref": [
+	   "my.bookshop1.Readers"
+	   ]
+	  }
+	 }
+	},
+	 "elements": {
+	"ID": {
+	 "key": true,
+	"type": "cds.Integer"
+	},
+ "name": {
+	 "type": "cds.String"
+	},
 },
 "$syntax": "projection"
 },
