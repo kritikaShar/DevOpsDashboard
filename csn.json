@@ -177,6 +177,7 @@
  "name": {
 	 "type": "cds.String"
 	},
+},
 "version": {
 	"csn": "1.0"
 	},
