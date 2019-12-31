@@ -37,7 +37,8 @@
 		 "ID"
 		]
 	  }
-	  ],
+	  ]
+	  },
 "stock": {
 	 "type": "cds.Inetger"
 	},
@@ -132,10 +133,12 @@
 		 "ID"
 		]
 	  }
+	  ]
 	  },
 "stock": {
 	 "type": "cds.Inetger"
 	},
+	}
 },
 "my.bookshop1.Authors" : {
  "kind": "entity",
@@ -166,6 +169,7 @@
 	 }
 	]
   },
+	}
 },
 "my.bookshop1.Readers" : {
  "kind": "entity",
@@ -177,6 +181,7 @@
  "name": {
 	 "type": "cds.String"
 	},
+	}
 },
 "version": {
 	"csn": "1.0"
