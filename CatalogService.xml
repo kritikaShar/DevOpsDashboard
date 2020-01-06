@@ -12,7 +12,9 @@
 	 <EntitySet Name="Authors" EntityType="CatalogService.Authors">
 		<NavigationPropertyBinding Path="author" Target="Book"/>
 	 </EntitySet>
-	 <EntitySet Name="Readers" EntityType="CatalogService.Readers"/>
+	 <EntitySet Name="Orders" EntityType="CatalogService.Orders">
+		<NavigationPropertyBinding Path="books" Target="Book"/>
+	 </EntitySet>
 	 </EntityContainer>
 	<EntityType  Name="Book">
 	 <Key>
@@ -38,14 +40,40 @@
 	 
 	  <NavigationProperty Name="books" Type="Collection(CatalogService.Book") Partner="author"/>
 	</EntityType>
-<EntityType Name="Readers">
+<EntityType Name="Orders">
 	 <Key>
 	  <PropertyRef Name="ID"/>
 		</Key>
-		<Property Name="ID"Type="Edm.Int32" Nullable="false"/>
-	  <Property Name="name "Type="Edm.String"/>
-	 </EntityType>
+		<Property Name="ID"Type="Edm.Guid" Nullable="false"/>
+	   <NavigationProperty Name="books" Type="CatalogService.Book">
+	  <ReferentialConstraint Property="books" ReferencedProperty="ID"/>
+	</NavigationProperty>
+</EntityType>
+
+	  <Property Name="buyer "Type="Edm.n/a"/>
+	
+	  <Property Name="date "Type="Edm.String"/>
+	
+	  <Property Name="amount "Type="Edm.Inetger"/>
+	</EntityType>
 <Annotations Target="CatalogService.EntityContainer/Authors">
+	<Annotation Term="Capabilities.DeleteRestrictions">
+	 <Record Type="Capabilities.DeleteRestrictionsType">
+		<PropertyValue Property="Deletable" Bool="false"/>
+	 </Record>
+	</Annotation>
+	<Annotation Term="Capabilities.InsertRestrictions">
+	 <Record Type="Capabilities.InsertRestrictionsType">
+		<PropertyValue Property="Insertable" Bool="false"/>
+	 </Record>
+	</Annotation>
+	<Annotation Term="Capabilities.UpdateRestrictions">
+	 <Record Type="Capabilities.UpdateRestrictionsType">
+		<PropertyValue Property="Updatable" Bool="false"/>
+	 </Record>
+	</Annotation>
+</Annotations>
+<Annotations Target="CatalogService.EntityContainer/Book">
 	<Annotation Term="Capabilities.DeleteRestrictions">
 	 <Record Type="Capabilities.DeleteRestrictionsType">
 		<PropertyValue Property="Deletable" Bool="false"/>
