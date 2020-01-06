@@ -88,14 +88,14 @@
 },
 "$syntax": "projection"
 },
-"CatalogService.Readers": {
+"CatalogService.Orders": {
 	"kind":"entity",
 	"@readonly": true,
 	"query": {
 	 "SELECT": {
 	  "from": {
 	   "ref": [
-	   "my.bookshop1.Readers"
+	   "my.bookshop1.Orders"
 	   ]
 	  }
 	 }
@@ -103,10 +103,27 @@
 	 "elements": {
 	"ID": {
 	 "key": true,
-	"type": "cds.Integer"
+	"type": "cds.UUID"
 	},
- "name": {
+ "books": {
+	  "type":"cds.Association",
+	  "target": "CatalogService.Orders",
+	  "keys": [
+	   {
+		"ref": [
+		 "ID"
+		]
+	  }
+	  ]
+	  },
+"buyer": {
+	 "type": "cds.n/a"
+	},
+"date": {
 	 "type": "cds.String"
+	},
+"amount": {
+	 "type": "cds.Inetger"
 	},
 },
 "$syntax": "projection"
@@ -138,7 +155,7 @@
 "stock": {
 	 "type": "cds.Inetger"
 	},
-	}
+ }
 },
 "my.bookshop1.Authors" : {
  "kind": "entity",
@@ -169,19 +186,37 @@
 	 }
 	]
   },
-	}
+ }
 },
-"my.bookshop1.Readers" : {
+"my.bookshop1.Orders" : {
  "kind": "entity",
 	 "elements": {
 	"ID": {
 	 "key": true,
-	"type": "cds.Integer"
+	"type": "cds.UUID"
 	},
- "name": {
+ "books": {
+	  "type":"cds.Association",
+	  "target": "my.bookshop1.Orders",
+	  "keys": [
+	   {
+		"ref": [
+		 "ID"
+		]
+	  }
+	  ]
+	  },
+"buyer": {
+	 "type": "cds.n/a"
+	},
+"date": {
 	 "type": "cds.String"
 	},
-	}
+"amount": {
+	 "type": "cds.Inetger"
+	},
+ }
+},
 },
 "version": {
 	"csn": "1.0"
