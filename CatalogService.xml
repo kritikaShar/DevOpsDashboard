@@ -29,7 +29,7 @@
 		 <ReferentialConstraint Property="author" ReferencedProperty="ID"/>
 	</NavigationProperty>
 
-	  <Property Name="stock "Type="Edm.Inetger"/>
+	  <Property Name="stock "Type="Edm.Integer"/>
 	</EntityType>
 <EntityType Name="Authors">
 	 <Key>
@@ -54,7 +54,7 @@
 	
 	  <Property Name="date "Type="Edm.String"/>
 	
-	  <Property Name="amount "Type="Edm.Inetger"/>
+	  <Property Name="amount "Type="Edm.Integer"/>
 	</EntityType>
 <Annotations Target="CatalogService.EntityContainer/Authors">
 	<Annotation Term="Capabilities.DeleteRestrictions">
