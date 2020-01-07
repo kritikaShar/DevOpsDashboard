@@ -50,9 +50,9 @@
 	</NavigationProperty>
 </EntityType>
 
-	  <Property Name="buyer "Type="Edm.n/a"/>
+	  <Property Name="buyer "Type="Edm.String"/>
 	
-	  <Property Name="date "Type="Edm.String"/>
+	  <Property Name="date "Type="Edm.DateTime"/>
 	
 	  <Property Name="amount "Type="Edm.Integer"/>
 	</EntityType>
