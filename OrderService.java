@@ -8,9 +8,9 @@ import com.sap.cloud.sdk.service.prov.api.exits.*;
 import com.sap.cloud.sdk.service.prov.api.request.*;
 import com.sap.cloud.sdk.service.prov.api.response.*;
 import org.slf4j.*;
-public class OrdersService {
+public class OrderService {
 
-	private static final Logger LOG = CloudLoggerFactory.getLogger(OrdersService.class.getName());
+	private static final Logger LOG = CloudLoggerFactory.getLogger(OrderService.class.getName());
 
 	@BeforeRead(entity = "Orders", serviceName = "CatalogService")
 
@@ -49,4 +49,5 @@ public class OrdersService {
 		modifiedList.add(ex);
 		 }
 	 return QueryResponse.setSuccess().setData(modifiedList).response();
-	 }}
+	 }
+}
